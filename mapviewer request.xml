@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<map_request
+             title="MIDNIGHT RUN"
+             basemap="demo_map"
+             datasource = "mvdemo"
+             width="640"
+             height="480"
+             bgcolor="#a6cae0"
+             antialiase="false"
+             format="PNG_STREAM">
+ 
+
+  
+<themes>
+    <theme name="t1"> 
+      <jdbc_query spatial_column = "SHAPE"
+                  datasource = "mvdemo">
+      SELECT SHAPE FROM MVDEMO.MIDNIGHTRUN
+      </jdbc_query>
+    </theme>
+  </themes>
+
+</map_request>
