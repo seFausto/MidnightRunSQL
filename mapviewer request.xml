@@ -7,10 +7,7 @@
              height="480"
              bgcolor="#a6cae0"
              antialiase="false"
-             format="PNG_STREAM">
- 
-
-  
+             format="PNG_STREAM">  
 <themes>
     <theme name="t1"> 
       <jdbc_query spatial_column = "SHAPE"
@@ -21,3 +18,29 @@
   </themes>
 
 </map_request>
+
+
+
+
+<!-- 
+<?xml version="1.0" standalone="yes"?>
+<map_request
+             title="Cola Markets"
+             basemap="demo_map"
+             datasource = "mvdemo"
+             width="400"
+             height="400"
+             bgcolor="#a6cae0"
+             antialiase="false"
+             format="PNG_STREAM">  
+<themes>
+    <theme name="t1"> 
+      <jdbc_query spatial_column = "SHAPE"
+                  datasource = "mvdemo">
+      SELECT SHAPE FROM MVDEMO.cola_markets
+      </jdbc_query>
+    </theme>
+  </themes>
+
+</map_request> 
+-->
