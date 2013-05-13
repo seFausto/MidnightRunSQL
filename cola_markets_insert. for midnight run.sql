@@ -1,5 +1,3 @@
---Made it so it inserts into cola markets because of the index
-
 delete from mvdemo.cola_markets;
 
 INSERT INTO mvdemo.cola_markets
@@ -11,7 +9,7 @@ VALUES (
     sdo_ordinate_array (10,2, 25,2, 25,2, 40,0,  40,0, 100,0))
 );
 
-commit;
+
 INSERT INTO mvdemo.cola_markets
 VALUES 
 (
@@ -19,17 +17,8 @@ VALUES
   'Mountains',
   sdo_geometry 
   (
-    2006, null, null, 
+    2, null, null, 
     sdo_elem_info_array ( 1,2,1 --line 1
-                          ,1,2,1 --line 2
-                          ,1,2,1 --line 3
-                          ,1,2,1 --line 4
-                          ,1,2,1 --line 5
-                          ,1,2,1 --line 6
-                          ,1,2,1 --line 7
-                          ,1,2,1 --line 8
-                          ,1,2,1 --line 9
-                          ,1,2,1 --line 10
                         ), 
     sdo_ordinate_array (  15,30, 22,40  --line 1
                           ,22,40, 29,33 --line 2 
@@ -46,6 +35,7 @@ VALUES
 );
 
 
+
 INSERT INTO mvdemo.cola_markets 
 VALUES(
   3,
@@ -54,18 +44,17 @@ VALUES(
     2003,  -- two-dimensional polygon
     NULL,
     NULL,
-    SDO_ELEM_INFO_ARRAY(  1,1005,2, --compound line, made from the 2 next triplets
-                          1,2,2
-                          ,5,2,2
+    SDO_ELEM_INFO_ARRAY(  1,1003,2
                         ),
-    SDO_ORDINATE_ARRAY( 21,50, --point 1 of curve
-                        24,53, --point 3 of curve
-                        21,56, --point 3 of curve 
+    SDO_ORDINATE_ARRAY( 21,50,
+                        24,53,
+                        21,56,
                         22,53,
                         21,50
                       )
   )
 );
+
 
 
 INSERT INTO mvdemo.cola_markets
@@ -75,15 +64,17 @@ VALUES
   'Bird 1',
   sdo_geometry 
   (
-    2006, null, null, 
-    sdo_elem_info_array ( 1,2,2 --line 1
-                         ,7,2,2 --line 2
+    2, null, null, 
+    sdo_elem_info_array (
+                           1,2,2
+                           ,7,2,2
                         ), 
     sdo_ordinate_array (   29,28, 31,30, 33,28  --line 1
                           ,33,28, 35,30, 37,28 --line 2 
                         )
   )
 );
+
 
 
 INSERT INTO mvdemo.cola_markets
@@ -93,7 +84,7 @@ VALUES
   'Bird 2',
   sdo_geometry 
   (
-    2006, null, null, 
+    2, null, null, 
     sdo_elem_info_array ( 1,2,2 --line 1
                          ,7,2,2 --line 2
                         ), 
@@ -102,6 +93,10 @@ VALUES
                         )
   )
 );
+
+
+
+
 
 INSERT INTO mvdemo.cola_markets VALUES(
 6,
@@ -112,11 +107,11 @@ SDO_GEOMETRY(
   NULL,
   SDO_ELEM_INFO_ARRAY(1,1003,4 -- one circle
                     ), 
-  SDO_ORDINATE_ARRAY(   43,0  --point 1 of 3
-                        ,45,1 --point 2 of 3
-                        ,43,3  --point 3 of 3
+  SDO_ORDINATE_ARRAY(   43,0 
+                        ,45,1
+                        ,43,3
                     )
-)
+  )
 );
 
 INSERT INTO mvdemo.cola_markets VALUES(
@@ -153,7 +148,7 @@ SDO_GEOMETRY(
 
 INSERT INTO mvdemo.cola_markets VALUES(
 9,
-'Tire 3',
+'Tire 4',
 SDO_GEOMETRY(
   2003,  -- two-dimensional polygon
   NULL,
@@ -166,6 +161,7 @@ SDO_GEOMETRY(
                     )
 )
 );
+
 
 
 INSERT INTO mvdemo.cola_markets VALUES(
@@ -194,6 +190,7 @@ INSERT INTO mvdemo.cola_markets VALUES(
   )
 );
 
+
 INSERT INTO mvdemo.cola_markets 
 VALUES(
   12,
@@ -202,12 +199,7 @@ VALUES(
     2003,  -- two-dimensional polygon
     NULL,
     NULL,
-    SDO_ELEM_INFO_ARRAY(  1,1005,2, --compound line, made from the 2 next triplets
-                          1,2,1
-                          ,1,2,1
-                          ,1,2,1
-                          ,1,2,1
-                          -- ,9,2,1
+    SDO_ELEM_INFO_ARRAY(  1,1003,1                        
                         ),
     SDO_ORDINATE_ARRAY(  55,8, 55,3 
                         ,55,3, 39,3
@@ -217,6 +209,8 @@ VALUES(
   )
 );
 
+
+commit;
 
 
 INSERT INTO mvdemo.cola_markets
@@ -228,8 +222,9 @@ VALUES
   (
     2006, null, null, 
     sdo_elem_info_array ( 1,2,1 --line 1
-                          ,1,2,1 --line 2
-                          ,1,2,1 --line 3
+                          ,5,2,1 --line 2
+                          ,9,2,1 --line 3
+                          ,13,2,1
                         ), 
     sdo_ordinate_array (   62, 8, 63,10   
                           ,63,10, 64, 8 
@@ -267,10 +262,10 @@ VALUES
   (
     2006, null, null, 
     sdo_elem_info_array ( 1,2,1 --line 1
-                          ,1,2,1 --line 2
-                          ,1,2,1 --line 3
-                          ,1,2,1
-                          ,1,2,1
+                          ,5,2,1 --line 2
+                          ,9,2,1 --line 3
+                          ,13,2,1
+                          ,17,2,1
                         ), 
     sdo_ordinate_array (   69,10, 67,10  
                           ,67,10, 67, 9 
