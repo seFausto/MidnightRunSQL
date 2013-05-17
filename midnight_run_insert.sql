@@ -1,16 +1,16 @@
-delete from midnightrun;
+delete from mvdemo.cola_markets;
 
-INSERT INTO midnightrun
+INSERT INTO mvdemo.cola_markets
 VALUES (
   1,
   'Ground',
-  sdo_geometry (2006, null, null, 
-    sdo_elem_info_array (1,2,1, 1,2,1, 1,2,1), 
+  sdo_geometry (2, null, null, 
+    sdo_elem_info_array (1,2,1), 
     sdo_ordinate_array (10,2, 25,2, 25,2, 40,0,  40,0, 100,0))
 );
 
-
-INSERT INTO midnightrun
+commit;
+INSERT INTO mvdemo.cola_markets
 VALUES 
 (
   2,
@@ -44,7 +44,7 @@ VALUES
 );
 
 
-INSERT INTO midnightrun 
+INSERT INTO mvdemo.cola_markets 
 VALUES(
   3,
   'Moon',
@@ -66,7 +66,7 @@ VALUES(
 );
 
 
-INSERT INTO midnightrun
+INSERT INTO mvdemo.cola_markets
 VALUES 
 (
   4,
@@ -84,7 +84,7 @@ VALUES
 );
 
 
-INSERT INTO midnightrun
+INSERT INTO mvdemo.cola_markets
 VALUES 
 (
   5,
@@ -101,7 +101,7 @@ VALUES
   )
 );
 
-INSERT INTO midnightrun VALUES(
+INSERT INTO mvdemo.cola_markets VALUES(
 6,
 'Tire 1',
 SDO_GEOMETRY(
@@ -117,7 +117,7 @@ SDO_GEOMETRY(
 )
 );
 
-INSERT INTO midnightrun VALUES(
+INSERT INTO mvdemo.cola_markets VALUES(
 7,
 'Tire 2',
 SDO_GEOMETRY(
@@ -133,7 +133,7 @@ SDO_GEOMETRY(
 )
 );
 
-INSERT INTO midnightrun VALUES(
+INSERT INTO mvdemo.cola_markets VALUES(
 8,
 'Tire 3',
 SDO_GEOMETRY(
@@ -149,7 +149,7 @@ SDO_GEOMETRY(
 )
 );
 
-INSERT INTO midnightrun VALUES(
+INSERT INTO mvdemo.cola_markets VALUES(
 9,
 'Tire 3',
 SDO_GEOMETRY(
@@ -166,7 +166,7 @@ SDO_GEOMETRY(
 );
 
 
-INSERT INTO midnightrun VALUES(
+INSERT INTO mvdemo.cola_markets VALUES(
   10,
   'Box',
   SDO_GEOMETRY(
@@ -179,7 +179,7 @@ INSERT INTO midnightrun VALUES(
   )
 );
 
-INSERT INTO midnightrun VALUES(
+INSERT INTO mvdemo.cola_markets VALUES(
   11,
   'Cabin',
   SDO_GEOMETRY(
@@ -192,7 +192,7 @@ INSERT INTO midnightrun VALUES(
   )
 );
 
-INSERT INTO midnightrun 
+INSERT INTO mvdemo.cola_markets 
 VALUES(
   12,
   'Engine',
@@ -217,7 +217,7 @@ VALUES(
 
 
 
-INSERT INTO midnightrun
+INSERT INTO mvdemo.cola_markets
 VALUES 
 (
   13,
@@ -237,7 +237,7 @@ VALUES
   )
 );
 
-INSERT INTO midnightrun 
+INSERT INTO mvdemo.cola_markets 
 VALUES(
   14,
   'Letter C',
@@ -256,7 +256,7 @@ VALUES(
 );
 
 
-INSERT INTO midnightrun
+INSERT INTO mvdemo.cola_markets
 VALUES 
 (
   15,

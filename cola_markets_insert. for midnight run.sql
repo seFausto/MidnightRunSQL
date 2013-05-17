@@ -172,7 +172,7 @@ INSERT INTO mvdemo.cola_markets VALUES(
     NULL,
     NULL,
     SDO_ELEM_INFO_ARRAY(1,1003,3), -- one rectangle (1003 = exterior)
-    SDO_ORDINATE_ARRAY( 55,3
+    SDO_ORDINATE_ARRAY( 55,3 --to make this:                                  --intersect with cabin and engine, make the 55 53
                         ,78,12) 
   )
 );
